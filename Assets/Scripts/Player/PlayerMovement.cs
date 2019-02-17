@@ -34,6 +34,16 @@ public class PlayerMovement : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, YMaxMin, YMaxMax);
         transform.position = pos;
         rb.velocity = new Vector2(x, y) * speed;
+        if (Input.GetMouseButtonDown(0))
+        {
+            {
+                //Debug.Log("Firing Gun");
+                GameObject go;
+                go = Instantiate(prefab, spawnAt.position, prefab.transform.rotation) as GameObject;
+                go.transform.SetParent(transform, true);
+            }
+        }
+
 
     }
 }

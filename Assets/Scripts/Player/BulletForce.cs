@@ -16,13 +16,7 @@ public class BulletForce : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            {
-                rb.isKinematic = false;
                 rb.AddForce(new Vector2(ballForce, ballForce));
                 transform.SetParent(null);
-            }
-        }
     }
 }
